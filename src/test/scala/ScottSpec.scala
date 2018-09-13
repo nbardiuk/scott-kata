@@ -54,7 +54,7 @@ class ScottSpec extends FlatSpec with Matchers {
   it can "be mapped over" in {
     Scott.empty(map[Int, Int](_ * 10, nil)) should be(true)
     toList(map[Char, Char](c => (c + 1).toChar, hello)) should be("ifmmp".toList)
-    toList(map[Int, Int]((_ * 5), digits)) should be(0 to(45, 5))
+    toList(map[Int, Int](_ * 5, digits)) should be(0 to(45, 5))
   }
   it can "be zipped with other lists" in {
     Scott.empty(zip(digits, nil)) should be(true)

@@ -44,9 +44,9 @@ object Scott {
 
   def fromEither[A, B](either: Either[A, B]): SEither[A, B] = ???
 
-  def isLeft[A](either: SEither[A, _]): Boolean = ???
+  def isLeft(either: SEither[_, _]): Boolean = ???
 
-  def isRight[A](either: SEither[A, _]): Boolean = ???
+  def isRight(either: SEither[_, _]): Boolean = ???
 
   def nil[A]: SList[A] = ???
 

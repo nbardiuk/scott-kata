@@ -66,10 +66,10 @@ object ScottSolution {
     def apply[C] = (left, right) => either.fold(left, right)
   }
 
-  def isLeft[A](either: SEither[A, _]): Boolean =
+  def isLeft(either: SEither[_, _]): Boolean =
     either[Boolean](_ => true, _ => false)
 
-  def isRight[A](either: SEither[A, _]): Boolean =
+  def isRight(either: SEither[_, _]): Boolean =
     either[Boolean](_ => false, _ => true)
 
   def nil[A]: SList[A] = new SList[A] {
